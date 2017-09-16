@@ -21,4 +21,4 @@ s.sendall(input_string)
 print s.recv(1024)
 
 # close the connection
-s.close()  
+s.close()
