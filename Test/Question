@@ -1,0 +1,1 @@
+Write a client server python program to send input from client to server, replace all the vowels with '#' and return the string to client and print it.
