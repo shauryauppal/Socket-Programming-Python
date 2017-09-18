@@ -65,3 +65,5 @@ Server uses `bind() , listen() , accept()`
  + [Explaination and sample program geeksforgeeks](http://www.geeksforgeeks.org/socket-programming-python/)
  + [Sample Program python socket programming](http://www.bogotobogo.com/python/python_network_programming_server_client.php)
  
+***************
+## Note - In **Socket_C** socket programming alternate C code is also added.
