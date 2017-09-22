@@ -17,7 +17,7 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 + s = socket.socket()
    + It simply creates a new socket using the given address family,socket type and protocol number.
 + port = 12345
-   + Reverse a port for computer
+   + Reserves a port for computer
 + s.bind('',port)
   + We binded our server to the specified port. Passing an empty string means that the server can listen to incoming connections from other computers as well. If we would have passed 127.0.0.1 then it would have listened to only those calls made within the local computer.
 + s.listen(5)
