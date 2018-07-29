@@ -26,17 +26,17 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
    + Return new socket object c and address
 + s.close()
   + Marks the socket closed, all future operaions on socket will be failed.
- 
+
  #### OverView
   ```
  #import library
  import socket
- 
+
  s=socket.socket()
  port=12345
  s.bind('',port)
  s.listen(5)
- 
+
  while True:
    c,addr = s.accept()
    data = c.recv(1024)
@@ -60,11 +60,20 @@ Server uses `bind() , listen() , accept()`
  print s.recv(1024)
  s.close()
 ```
- 
+
+<img src = 'https://raw.githubusercontent.com/InternityFoundation/Socket-Programming-Python/master/1.%20String%20Reverse%20(Client-Server)%20Python/ReverseString.PNG' height = "430px" width = "630px"/>
+
  ## Reference Link
  + [Explaination and sample program geeksforgeeks](http://www.geeksforgeeks.org/socket-programming-python/)
  + [Sample Program python socket programming](http://www.bogotobogo.com/python/python_network_programming_server_client.php)
- 
+
+ ****************
+ ## CRC Socket PROGRAMMING
+ [Article Link](https://www.geeksforgeeks.org/cyclic-redundancy-check-python/)
+
+ <img src = 'https://raw.githubusercontent.com/InternityFoundation/Socket-Programming-Python/master/3.%20Client%20Server%20CRC%20code/CRC.PNG' height = "430px" width = "630px"/>
+
+
 ***************
 ## Note - In **Socket_C** socket programming alternate C code is also added.
 
@@ -72,7 +81,7 @@ Server uses `bind() , listen() , accept()`
 # SOCKET PROGRAMMING WITH MULTI-THREADING
 ### Checkout My Article [Socket Programming Multi-Threading At Geeksforgeeks](http://www.geeksforgeeks.org/socket-programming-multi-threading-python/)
 
-## Socket Programming-> 
+## Socket Programming->
 It helps us to connect a client to a server. Client is message sender and receiver and server is just a listener that works on data sent by client.
 
 ## What is a Thread?
@@ -105,39 +114,39 @@ Let's study client-server multithreading socket programming by code-\
 ```
 # import socket programming library
 import socket
- 
+
 # import thread module
 from _thread import *
 import threading
- 
+
 print_lock = threading.Lock()
- 
+
 # thread fuction
 def threaded(c):
     while True:
- 
+
         # data received from client
         data = c.recv(1024)
         if not data:
             print('Bye')
-             
+
             # lock released on exit
             print_lock.release()
             break
- 
+
         # reverse the given string from client
         data = data[::-1]
- 
+
         # send back reversed string to client
         c.send(data)
- 
+
     # connection closed
     c.close()
- 
- 
+
+
 def Main():
     host = ""
- 
+
     # reverse a port on your computer
     # in our case it is 12345 but it
     # can be anything
@@ -145,26 +154,26 @@ def Main():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
     print("socket binded to post", port)
- 
+
     # put the socket into listening mode
     s.listen(5)
     print("socket is listening")
- 
+
     # a forever loop until client wants to exit
     while True:
- 
+
         # establish connection with client
         c, addr = s.accept()
- 
+
         # lock acquired by client
         print_lock.acquire()
         print('Connected to :', addr[0], ':', addr[1])
- 
+
         # Start a new thread and return its identifier
         start_new_thread(threaded, (c,))
     s.close()
- 
- 
+
+
 if __name__ == '__main__':
     Main()
 ```
@@ -179,34 +188,34 @@ Bye
 ```
 # Import socket module
 import socket
- 
- 
+
+
 def Main():
     # local host IP '127.0.0.1'
     host = '127.0.0.1'
- 
+
     # Define the port on which you want to connect
     port = 12345
- 
+
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
- 
+
     # connect to server on local computer
     s.connect((host,port))
- 
+
     # message you send to server
     message = "shaurya says geeksforgeeks"
     while True:
- 
+
         # message sent to server
         s.send(message.encode('ascii'))
- 
+
         # messaga received from server
         data = s.recv(1024)
- 
+
         # print the received message
         # here it would be a reverse of sent message
         print('Received from the server :',str(data.decode('ascii')))
- 
+
         # ask the client whether he wants to continue
         ans = input('\nDo you want to continue(y/n) :')
         if ans == 'y':
@@ -215,11 +224,11 @@ def Main():
             break
     # close the connection
     s.close()
- 
+
 if __name__ == '__main__':
     Main()
 ```
- 
+
 ```
 Console Window:
 Received from the server : skeegrofskeeg syas ayruahs
@@ -233,3 +242,8 @@ Process finished with exit code 0
 ```
 Reference->\
 <https://docs.python.org/2/library/thread.html>
+
+*************************
+
+#### Author:
+##### Shaurya Uppal
