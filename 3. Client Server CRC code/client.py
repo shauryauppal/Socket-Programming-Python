@@ -98,7 +98,7 @@ s.connect(('127.0.0.1', port))
 input_string = raw_input("Enter data you want to send->")
 #s.sendall(input_string)
 data =(''.join(format(ord(x), 'b') for x in input_string))
-print data
+print (data)
 key = "1001"
 
 ans = encodeData(data,key)
@@ -107,7 +107,7 @@ s.sendall(ans)
 
 
 # receive data from the server
-print s.recv(1024)
+print (s.recv(1024))
 
 # close the connection
 s.close()
