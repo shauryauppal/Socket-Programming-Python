@@ -1,4 +1,6 @@
 # Guide to Socket Programming Introduction
+[![HitCount](http://hits.dwyl.io/shauryauppal/Socket-Programming-Python.svg)](https://github.com/shauryauppal/Socket-Programming-Python) [![MadeIn](https://img.shields.io/badge/MADE%20IN-PYTHON-darkblue.svg)](https://github.com/shauryauppal/Socket-Programming-Python) [![MadeIn](https://img.shields.io/badge/MADE%20IN-C-yellowgreen.svg)](https://github.com/shauryauppal/Socket-Programming-Python/tree/master/Socket_C) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![GitHub stars](https://img.shields.io/github/stars/shauryauppal/Socket-Programming-Python.svg)](https://github.com/shauryauppal/Socket-Programming-Python/stargazers)
 
 ## Socket programming is started by socket library
 
@@ -244,6 +246,16 @@ Reference->\
 <https://docs.python.org/2/library/thread.html>
 
 *************************
+## Contributions
+<a href="https://github.com/shauryauppal/Socket-Programming-Python/issues"> Issues </a> and <a href ="https://github.com/shauryauppal/Socket-Programming-Python/pulls"> Pull requests </a> are most welcome.
 
-#### Author:
-##### Shaurya Uppal
+*************
+
+### Author:
+#### Shaurya Uppal
+shauryauppal00111@gmail.com
+
+Feel free to mail me for any queries.
+
+#### If this helped you in any way gift me a cup of coffee :coffee:
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UXSREFS2VFSWU)
