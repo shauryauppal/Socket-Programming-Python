@@ -87,7 +87,6 @@ class SocketServer(threading.Thread):
                 # Timeout every 60 seconds
                 selection = select.select(self.connections, [], [], 5)
                 read_sock = selection[0]
-                error_sock = selection[2]
             except select.error:
                 print("Error!!!")
             else:
