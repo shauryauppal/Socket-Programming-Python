@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-import sys
 import json
-import math
 import socket
 import select
 import struct
@@ -23,7 +21,6 @@ class SocketServer(threading.Thread):
     MAX_WAITING_CONNECTIONS = 5
     RECV_BUFFER = 4096
     RECV_MSG_LEN = 4
-    
     def __init__(self, host, port):
         threading.Thread.__init__(self)
         self.host = host
@@ -38,7 +35,8 @@ class SocketServer(threading.Thread):
         self.server_socket.listen(self.MAX_WAITING_CONNECTIONS)
         self.connections.append(self.server_socket)
         
-    def _send(self, sock, msg):
+    @classmethod
+    def _send(cls, sock, msg):
         # Append message with length of message
         msg = struct.pack(">I", len(msg)) + msg.encode("utf-8")
         sock.send(msg)
