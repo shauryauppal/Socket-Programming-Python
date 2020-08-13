@@ -14,12 +14,6 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 *****************
 
-###### Socket Programming Python is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial
-<a href="https://tracking.gitads.io/?repo=Socket-Programming-Python"> <img src="https://images.gitads.io/Socket-Programming-Python" alt="GitAds" width="400" height="130"/> </a>
-
----
-
-
 ## SERVER code
 + s = socket.socket()
    + It simply creates a new socket using the given address family,socket type and protocol number.
@@ -255,6 +249,9 @@ Reference->\
 <a href="https://github.com/shauryauppal/Socket-Programming-Python/issues"> Issues </a> and <a href ="https://github.com/shauryauppal/Socket-Programming-Python/pulls"> Pull requests </a> are most welcome.
 
 *************
+<a href="https://tracking.gitads.io/?repo=Socket-Programming-Python"> <img src="https://images.gitads.io/Socket-Programming-Python" alt="GitAds" width="400" height="130"/> </a>
+
+---
 
 ### Author:
 #### Shaurya Uppal
