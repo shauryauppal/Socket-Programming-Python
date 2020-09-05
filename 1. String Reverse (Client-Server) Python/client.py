@@ -14,11 +14,11 @@ s.connect(('127.0.0.1', port))
 
 ## s.sendall('Hello World')
 
-input_string = raw_input("Enter data you want to send->")
-s.sendall(input_string)
+input_string = input("Enter data you want to send->")
+s.sendall(bytes(input_string,'utf-8'))
 
 # receive data from the server
-print s.recv(1024)
+print(s.recv(1024).decode())
 
 # close the connection
 s.close()
