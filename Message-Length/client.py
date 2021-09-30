@@ -67,3 +67,4 @@ def main(host, port, recv_msg_len, recv_buffer):
         
 if __name__ == "__main__":
     main("127.0.0.1", 10101, 4, 1024)
+print("hi")
